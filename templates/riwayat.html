@@ -1,0 +1,42 @@
+{% extends 'index.html' %}
+
+{% block bodyblock %}
+
+<!-- Welcome Message -->
+<div class="container">
+
+    <br>
+    <h3 class="content">Presence History</h3>
+    
+    
+    <table class="table table-striped">
+    <thead>
+        <table class="table table-striped">
+    <tr>
+        <td>Nama</td>
+        <td>ID</td>
+        <td>Tanggal</td>
+        <td>Waktu</td>
+        <td>Status</td>
+    </tr>
+    </thead>
+    <tbody>
+        {% for row in riwayat %}
+    <tr>
+        <td>{{ row.0 }}</td>
+        <td>{{ row.1 }}</td>
+        <td>{{ row.2 }}</td>
+        <td>{{ row.3 }}</td>
+        <td>{{ row.4 }}</td>
+    </tr>
+        {% else %}
+    <tr>
+        <td colspan="2">Unbelievable. No entries here so far</td>
+    </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+
+</div>
+
+{% endblock %}

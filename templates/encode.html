@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+
+{% block bodyblock %}
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
+<script type=text/javascript> $(function() { $("#encodeButton").click(function (event) { $.getJSON('/encodeFunction', { }, function(data) { }); return false; }); }); </script> 
+
+<div class="container">
+    <h3>Tekan tombol di bawah untuk memulai proses encoding wajah.</h3><br><br>
+    <input type = "button" id = "encodeButton" value = "Start Encoding" />
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     navActivePage();
+  });
+</script>
+
+<script type="text/javascript" src="../static/main.70a66962.js"></script>
+
+{% endblock  %}

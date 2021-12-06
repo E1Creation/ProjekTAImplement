@@ -1,0 +1,19 @@
+.content{
+    color: #002f4d;
+}
+
+.fit{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#predict{
+    border: solid;
+    color: #002f4d;
+    text-align: center;
+}
+
+.videopre{
+    padding:1.051%;
+    background-color:#002f4d;
+    } 

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='css/main.css')}}">
+    <title> Face Recognition APP </title>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+<!-- Specify the end point to index.html on href -->
+          <a class="navbar-brand">
+              <img src="{{ url_for('static', filename='images/Logo-Elektro-ok.png')}}" alt="" width="200" height="50">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="/upload.html">Upload</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/absen.html">Presence App</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/riwayat.html">Show History</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/encode.html">Encode</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+<!-- Bodyblock -->
+
+{% block bodyblock%}
+
+{% endblock  %}
+
+<!-- footer -->
+
+<footer class="footer">
+  <div class="container">
+    <p align="center">
+      <span style="color: white;">
+        &copy; Electrical Engineering Diponegoro University
+      </span>
+    </p>
+  </div>
+</footer>
+
+<!-- Style -->
+
+<style>
+  .footer{
+    position: fixed;
+    left:0 ;
+    bottom:0;
+    width: 100%;
+    background-color: #002f4d;
+    padding-top: 20px;
+    padding-bottom: 10px;}
+   .content{
+      color: #002f4d;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     navActivePage();
+  });
+</script>
+
+<!-- TODO: Import the Firebase Performance Monitoring library here. -->
+<script src="/__/firebase/7.14.2/firebase-performance.js"></script>
+<script src="/__/firebase/init.js"></script>
+<!-- TODO: Enable First Input Delay polyfill library. -->
+<script type="text/javascript">!function(n,e){var t,o,i,c=[],f={passive:!0,capture:!0},r=new Date,a="pointerup",u="pointercancel";function p(n,c){t||(t=c,o=n,i=new Date,w(e),s())}function s(){o>=0&&o<i-r&&(c.forEach(function(n){n(o,t)}),c=[])}function l(t){if(t.cancelable){var o=(t.timeStamp>1e12?new Date:performance.now())-t.timeStamp;"pointerdown"==t.type?function(t,o){function i(){p(t,o),r()}function c(){r()}function r(){e(a,i,f),e(u,c,f)}n(a,i,f),n(u,c,f)}(o,t):p(o,t)}}function w(n){["click","mousedown","keydown","touchstart","pointerdown"].forEach(function(e){n(e,l,f)})}w(n),self.perfMetrics=self.perfMetrics||{},self.perfMetrics.onFirstInputDelay=function(n){c.push(n),s()}}(addEventListener,removeEventListener);</script>
+
+<script type="text/javascript" src="../static/main.70a66962.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+
+{% block bodyblock %}
+
+<div class="container">
+    <h3>Face Recognition</h3>
+    <br>
+    <div class='row' align="center">
+    <div class='col-lg-8-offset-lg-2'> 
+    <img class="videopre" src="{{ url_for('video_feed') }}" max-width="75%"/>
+    </div>
+    </div>
+    <br>
+    <button><a href="./riwayat.html" title="">Show History</a></button>
+
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     navActivePage();
+  });
+</script>
+
+<script type="text/javascript" src="../static/main.70a66962.js"></script>
+
+<style>
+.videopre {
+    max-height: 75%;
+    max-width: 75%;
+    padding:1.051%;
+    background-color:#002f4d;
+    } 
+</style>
+
+{% endblock  %}

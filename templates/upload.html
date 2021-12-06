@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+
+{% block bodyblock %}
+
+<div class="container">
+    <br>
+    <h3 class="content">Add New Face to Encode</span></h3>
+    <br>
+    <h2 class="content">Rename your picture file with your full name before uploading it</span></h2>
+    <br>
+    <form method=post enctype=multipart/form-data>
+    <br>
+    <input type=file name=file>
+    <br>
+    <input type=submit value=Upload>
+    </form> 
+
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     navActivePage();
+  });
+</script>
+
+<script type="text/javascript" src="../static/main.70a66962.js"></script>
+
+{% endblock  %}
